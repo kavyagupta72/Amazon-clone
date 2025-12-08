@@ -31,21 +31,21 @@ function Home() {
                 <Product
                 id="43215665"
                 title="Pride and Prejudice"
-                price="124"
+                price={124}
                 rating={4}
                 image="https://m.media-amazon.com/images/I/41crtWt37bL._SY445_SX342_QL70_FMwebp_.jpg"
                 />
                 <Product
                 id="543678321"
                 title="iPhone 16e 128 GB"
-                price="51499"
+                price={51499}
                 rating={4}
                 image="https://m.media-amazon.com/images/I/61SKi94cImL._SX679_.jpg"
                 />
                 <Product
                 id="564890765"
                 title="Seseno Detergent, Soap Dispenser for Kitchen with Sponge Holder"
-                price="199"
+                price={199}
                 rating={3}
                 image="https://m.media-amazon.com/images/I/51l8nRp3FqL._SX679_.jpg"
                 />
@@ -55,7 +55,7 @@ function Home() {
                 <Product
                 id="234516544"
                 title="TRIUMPH Speed 400 MY25 Bike Phantom Black"
-                price="233754"
+                price={233754}
                 rating={5}
                 image="https://m.media-amazon.com/images/I/71zKnIsrqML._SX679_.jpg"
                 />

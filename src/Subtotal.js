@@ -6,7 +6,7 @@ import { getBasketTotal } from './Reducer';
 
 
 function Subtotal() {
-  const [{basket}, dispatch] = useStateValue();
+  const [{basket}, dispatch] = useStateValue();   //data layer
   return (
     <div className = 'subtotal'>
       <NumericFormat
