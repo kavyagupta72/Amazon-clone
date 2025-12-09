@@ -25,9 +25,11 @@ function Header() {
                 <span className="header_optionLineOne">
                     Hello, Guest!
                 </span>
+                <Link to="./Login" style={{textDecoration: 'none', color: 'white'}}>
                 <span className="header_optionLineTwo">
                     Sign In
                 </span>
+                </Link>
             </div>
             <div className="header__option">
                 <span className="header_optionLineOne">
