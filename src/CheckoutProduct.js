@@ -1,11 +1,12 @@
 import React from 'react'
 import './CheckoutProduct.css';
+import {useStateValue} from './StateProvider';
 
 function CheckoutProduct({id, image, title, price, rating}) {
     const removeFromBasket = () => {
         dispatchEvent({
-            type: 'REMOVE_FROM_BASKET';
-            id : id;
+            type: 'REMOVE_FROM_BASKET',
+            id : id
         })
     }
   return (
