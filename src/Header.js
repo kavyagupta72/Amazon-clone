@@ -4,9 +4,16 @@ import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {useStateValue} from './StateProvider';
+import { signOut } from 'firebase/auth';
+import {auth} from './firebase';
 
 function Header() {
-    const [{basket}, dispatch] = useStateValue();
+    const [{basket, user}, dispatch] = useStateValue();
+    const handleAuthentication = () =>{
+        if (user){
+            auth.signOut();
+        }
+    }
   return (
     <div className = "header">
         <Link to='/'>
@@ -25,9 +32,9 @@ function Header() {
                 <span className="header_optionLineOne">
                     Hello, Guest!
                 </span>
-                <Link to="./Login" style={{textDecoration: 'none', color: 'white'}}>
+                <Link to={!{user} && "./Login"} style={{textDecoration: 'none', color: 'white'}}>
                 <span className="header_optionLineTwo">
-                    Sign In
+                    {user ? 'Sign Out' : 'Sign In'}
                 </span>
                 </Link>
             </div>
@@ -39,7 +46,7 @@ function Header() {
                     & Orders
                 </span>
             </div>
-            <div className="header__option">
+            <div onClick={handleAuthentication} className="header__option">
                 <span className="header_optionLineOne">
                     Your
                 </span>
